@@ -9,8 +9,8 @@ pygame.init()
 f = 100
 screen = pygame.display.set_mode((9*f, 9*f))
 pygame.display.set_caption('Connect4')
-icon = pygame.image.load('rocket.png')
-pygame.display.set_icon(icon)
+#icon = pygame.image.load('rocket.png')
+#pygame.display.set_icon(icon)
 
 
 class TextBox:
@@ -150,7 +150,7 @@ class Game(object):
         if col<0 or col > 7:
             return
         # find the highest empty i value in that column
-        for i in range(5, -1, -1):
+        for i in range(6, -1, -1):
             if self.grid[i][col] == -1:
                 self.grid[i][col]=self.turn
                 self.turn  = 1 - self.turn
